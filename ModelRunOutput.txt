@@ -1,0 +1,133 @@
+===== logistic_regression =====
+--- Validation ---
+ROC‑AUC (val): 0.962003600128576
+              precision    recall  f1-score   support
+
+           0       0.97      0.99      0.98     18300
+           1       0.87      0.62      0.73      1700
+
+    accuracy                           0.96     20000
+   macro avg       0.92      0.81      0.85     20000
+weighted avg       0.96      0.96      0.96     20000
+
+
+--- Test ---
+ROC‑AUC (test): 0.959932369013179
+Appended: diabetes_probability_logistic_regression
+
+===== decision_tree =====
+--- Validation ---
+ROC‑AUC (val): 0.8501398264223722
+              precision    recall  f1-score   support
+
+           0       0.97      0.98      0.98     18300
+           1       0.73      0.72      0.73      1700
+
+    accuracy                           0.95     20000
+   macro avg       0.85      0.85      0.85     20000
+weighted avg       0.95      0.95      0.95     20000
+
+
+--- Test ---
+ROC‑AUC (test): 0.8563645130183222
+Appended: diabetes_probability_decision_tree
+
+===== random_forest =====
+--- Validation ---
+ROC‑AUC (val): 0.9592511732561877
+              precision    recall  f1-score   support
+
+           0       0.97      1.00      0.98     18300
+           1       1.00      0.66      0.79      1700
+
+    accuracy                           0.97     20000
+   macro avg       0.98      0.83      0.89     20000
+weighted avg       0.97      0.97      0.97     20000
+
+
+--- Test ---
+ROC‑AUC (test): 0.9580896817743491
+Appended: diabetes_probability_random_forest
+
+===== xgboost =====
+c:\Users\Anshuman\AppData\Local\Programs\Python\Python312\Lib\site-packages\xgboost\training.py:183: UserWarning: [15:37:33] WARNING: C:\actions-runner\_work\xgboost\xgboost\src\learner.cc:738: 
+Parameters: { "use_label_encoder" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+--- Validation ---
+ROC‑AUC (val): 0.9774626486660237
+              precision    recall  f1-score   support
+
+           0       0.97      1.00      0.98     18300
+           1       0.96      0.69      0.80      1700
+
+    accuracy                           0.97     20000
+   macro avg       0.97      0.84      0.89     20000
+weighted avg       0.97      0.97      0.97     20000
+
+
+--- Test ---
+ROC‑AUC (test): 0.9753882352941174
+Appended: diabetes_probability_xgboost
+
+===== lightgbm =====
+[LightGBM] [Warning] Found whitespace in feature_names, replace with underlines
+[LightGBM] [Info] Number of positive: 5950, number of negative: 64050
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.002143 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 544
+[LightGBM] [Info] Number of data points in the train set: 70000, number of used features: 75
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.085000 -> initscore=-2.376273
+[LightGBM] [Info] Start training from score -2.376273
+--- Validation ---
+ROC‑AUC (val): 0.9781022018643524
+              precision    recall  f1-score   support
+
+           0       0.97      1.00      0.98     18300
+           1       0.98      0.67      0.80      1700
+
+    accuracy                           0.97     20000
+   macro avg       0.97      0.84      0.89     20000
+weighted avg       0.97      0.97      0.97     20000
+
+
+--- Test ---
+ROC‑AUC (test): 0.9770165220186435
+Appended: diabetes_probability_lightgbm
+
+===== neural_network =====
+c:\Users\Anshuman\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:690: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (300) reached and the optimization hasn't converged yet.
+  warnings.warn(
+--- Validation ---
+ROC‑AUC (val): 0.9560295403407265
+              precision    recall  f1-score   support
+
+           0       0.97      0.98      0.98     18300
+           1       0.79      0.70      0.74      1700
+
+    accuracy                           0.96     20000
+   macro avg       0.88      0.84      0.86     20000
+weighted avg       0.96      0.96      0.96     20000
+
+
+--- Test ---
+ROC‑AUC (test): 0.9602322082931534
+Appended: diabetes_probability_neural_network
+
+===== naive_bayes =====
+--- Validation ---
+ROC‑AUC (val): 0.8826083895853423
+              precision    recall  f1-score   support
+
+           0       0.99      0.59      0.74     18300
+           1       0.17      0.92      0.29      1700
+
+    accuracy                           0.61     20000
+   macro avg       0.58      0.75      0.51     20000
+weighted avg       0.92      0.61      0.70     20000
+
+
+--- Test ---
+ROC‑AUC (test): 0.8852560591449695
+Appended: diabetes_probability_naive_bayes
